@@ -44,7 +44,7 @@ body {
     border: 2mm ridge darkgrey;
     /* border-radius: 20px; */
     background-color: white;
-    margin-bottom: 8%;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-evenly;
     align-items: space-evenly;
@@ -61,6 +61,25 @@ body {
 .grid-container .grid .column .row {
     flex: 1;
     transition-duration: 250ms;
+}
+
+/* footer div */
+.footer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* icon link in footer div */
+.footer a {
+    color: white;
+    margin-left: 10px;
+    
+    &&:hover {
+        transform: scale(1.1);
+    }
 }
 
 /* inputs div */

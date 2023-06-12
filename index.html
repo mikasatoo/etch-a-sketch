@@ -9,42 +9,44 @@
     <!-- Links to other files -->
     <link rel="stylesheet" href="styles.css"/>
     <script src="script.js" defer></script>
+    <script src="jscolor.js"></script>
 </head>
 
 <body>
     <div class="content">
-        <div class="grid-container">
-            <div class="header">Etch A Sketch</div>
-
-            <div class="grid">  <!-- the grid divs will be created within this div -->
-            </div>
-        </div>
-
         <div class="inputs">
             <div class="grid-size">
                 <h3>Grid size:</h3>
                 <div class="slider-container">
                     <!-- <label for="size-range">Set grid size:</label> -->
-                    <input type="range" min="0" max="9" value="3" step = "1" class="slider" id="size-range">
+                    <input type="range" min="0" max="11" value="3" step = "1" class="slider" id="size-range">
                 </div>
                 <div id="grid-size-output"></div>
             </div>
 
             <div class="colour">
                 <h3>Pen colour:</h3>
-                <span class="dot"><input type="color" id="pen-colour" name="pen-colour" value="#000000"></span>
-                <!-- <label for="pen-colour">Choose pen colour:</label> -->
+                <!-- <span class="dot"><input type="color" id="pen-colour" name="pen-colour" value="#000000"></span> -->
+                <input id="pen-colour" value="#000000" data-jscolor="{}">
+
                 <button id="rainbow-button">Rainbow</button>
             </div>
 
             <div class="erase">
                 <h3>Erase:</h3>
-                <button id="erase-button">Eraser</button>
+                <button id="erase-button" class="parallelogram">Eraser</button>
             </div>
 
             <div class="clear">
                 <h3>Clear sketch:</h3>
                 <button id="clear-button">Clear</button>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="header">Etch A Sketch</div>
+
+            <div class="grid">  <!-- the grid divs will be created within this div -->
             </div>
         </div>
     </div>

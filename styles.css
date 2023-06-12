@@ -7,8 +7,9 @@ body {
 /* content div */
 .content {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     font-size: 16px;
+    padding: 20px;
 }
 
 /* grid-container div */
@@ -18,10 +19,11 @@ body {
     justify-content: center;
     align-items: center;
     align-self: center;
-    background-color: red;
+    background-color: #D2042D;
     width: 60%;
+    max-width: 600px;
     margin: 20px 0px;
-    border: 3mm ridge red;
+    border: 3mm ridge #D2042D;
 }
 
 /* header div (in grid-container div) */
@@ -63,22 +65,25 @@ body {
 /* inputs div */
 .inputs {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
+    padding-top: 20px;
 }
 
 /* grid-size div (in inputs div) */
 .inputs .grid-size {
     display: flex;
     flex-direction: column;
-    margin: 10px;
-    width: 20%;
+    margin: 20px;
+    width: 80%;
     align-items: center;
 }
 
 /* h3 elements */
 h3 {
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -96,24 +101,24 @@ h3 {
     border-radius: 5px;
     background: #d3d3d3;
     outline: none;
-    opacity: 0.7;
+    opacity: 0.8;
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%; 
-    background: #04AA6D;
+    background: #D2042D;
     cursor: pointer;
 }
 .slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #D2042D;
     cursor: pointer;
 }
 
@@ -121,34 +126,52 @@ h3 {
 .inputs .colour {
     display: flex;
     flex-direction: column;
-    margin: 10px;
-    width: 20%;
+    margin: 20px;
+    width: 80%;
     align-items: center;
 }
 
-/* dot span (in colour div) */
+/* pen-colour input (in colour div */
+.inputs .colour #pen-colour {
+    margin-bottom: 10px;
+    width: 40%;
+    max-width: 160px;
+    font-size: 16px;
+
+    &&:hover {
+        cursor: text;
+    }
+}
+
+/* dot span (in colour div)
 .inputs .colour .dot {
     margin-bottom: 10px;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     background-color: black;
     display: inline-block;
     align-self: center;
-}
+    
+    &&:hover {
+        transition-duration: 250ms;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+} */
 
-/* pen-colour input (in dot span) */
+/* pen-colour input (in dot span)
 .inputs .colour #pen-colour {
     display: none;
-}
+} */
 
 /* erase and clear divs (in inputs div) */
 .inputs .erase,
 .inputs .clear {
     display: flex;
     flex-direction: column;
-    margin: 10px;
-    width: 20%;
+    margin: 20px;
+    width: 80%;
     align-items: center;
 }
 
@@ -156,12 +179,46 @@ h3 {
 button {
     padding: 10px;
     width: 60%;
+    min-width: 60px;
+    max-width: 120px;
     border-radius: 10px;
+    font-size: 16px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    border-color: black;
+    
+    &:hover {
+        transition-duration: 250ms;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    &:active {
+        box-shadow: 2px 2px 5px black;
+    }
 }
-button:hover {
-    /* transition-duration: 250ms; */
-    cursor: pointer;
-    /* transform: scale(1.1); */
+
+/* rainbow-button */
+button#rainbow-button {
+    background: url("./images/rainbow.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #ffc1cc;  /* if background image doesn't load */
+}
+
+/* erase-button */
+#erase-button.parallelogram {
+    transform: skew(-20deg);
+    background-color: #ffc1cc;
+
+    &:hover {
+        transition-duration: 250ms;
+        cursor: pointer;
+        transform: skew(-20deg) scale(1.1);
+    }
+}
+
+/* clear-button */
+button#clear-button {
+    background-color: white;
 }

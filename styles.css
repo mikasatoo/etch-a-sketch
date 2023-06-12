@@ -24,6 +24,7 @@ body {
     max-width: 600px;
     margin: 20px 0px;
     border: 3mm ridge #D2042D;
+    border-radius: 20px;
 }
 
 /* header div (in grid-container div) */

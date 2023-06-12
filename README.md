@@ -1,6 +1,9 @@
 # Etch-A-Sketch
 
-An etch-a-sketch toy in the browser, created using HTML, CSS, and JavaScript.
+An etch-a-sketch toy in the browser, created using vanilla HTML, CSS, and JavaScript.
+
+Live preview at: https://mikasatoo.github.io/etch-a-sketch/
+
 
 Image sources:
 - Sketcher by Theresa Stoodley from <a href="https://thenounproject.com/browse/icons/term/sketcher/" target="_blank" title="Sketcher Icons">Noun Project</a>

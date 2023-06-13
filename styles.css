@@ -1,5 +1,5 @@
 body {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: Courier New, monospace, Verdana, Arial, Helvetica, sans-serif;
     margin: 0;
     min-height: 100vh;
 }
@@ -29,8 +29,7 @@ body {
 
 /* header div (in grid-container div) */
 .grid-container .header {
-    /* font-family: comic sans ms, Verdana, Arial, Helvetica, sans-serif; */
-    font-family: Courier New, monospace;
+    font-family: Courier New, monospace, Verdana, Arial, Helvetica, sans-serif;
     font-style: italic;
     font-weight: bold;
     font-size: 36px;
@@ -105,17 +104,23 @@ body {
     align-items: center;
 }
 
-/* h3 elements */
+/* h3 elements
 h3 {
     font-size: 18px;
     margin-top: 0;
     margin-bottom: 10px;
+} */
+
+/* grid-size-output div (in grid-size div) */
+.inputs .grid-size #grid-size-output {
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-/* slider-container div (in grid-size div) */
+/* slider-container div (in grid-size div)
 .inputs .grid-size .slider-container {
-    margin-bottom: 10px;
-}
+    margin-top: 10px;
+} */
 
 /* slider (in slider-container div) */
 .inputs .grid-size .slider-container .slider {
@@ -134,7 +139,7 @@ h3 {
     appearance: none;
     width: 25px;
     height: 25px;
-    border-radius: 50%; 
+    border-radius: 50%;
     background: #E90418;
     cursor: pointer;
 }
@@ -161,6 +166,7 @@ h3 {
     width: 40%;
     max-width: 160px;
     font-size: 16px;
+    font-family: Courier New, monospace, Verdana, Arial, Helvetica, sans-serif;
 
     &&:hover {
         cursor: text;
@@ -208,7 +214,7 @@ button {
     border-radius: 10px;
     font-size: 16px;
     text-align: center;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: Courier New, monospace, Verdana, Arial, Helvetica, sans-serif;
     border-color: black;
     
     &:hover {

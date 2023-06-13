@@ -17,16 +17,16 @@
     <div class="content">
         <div class="inputs">
             <div class="grid-size">
-                <h3>Grid size:</h3>
+                <!-- <h3>Grid size:</h3> -->
+                <div id="grid-size-output"></div>
                 <div class="slider-container">
                     <!-- <label for="size-range">Set grid size:</label> -->
-                    <input type="range" min="0" max="11" value="3" step = "1" class="slider" id="size-range">
+                    <input type="range" min="1" max="100" value="16" step = "1" class="slider" id="size-range">
                 </div>
-                <div id="grid-size-output"></div>
             </div>
 
             <div class="colour">
-                <h3>Pen colour:</h3>
+                <!-- <h3>Pen colour:</h3> -->
                 <!-- <span class="dot"><input type="color" id="pen-colour" name="pen-colour" value="#000000"></span> -->
                 <input id="pen-colour" value="#000000" data-jscolor="{}">
 
@@ -34,12 +34,12 @@
             </div>
 
             <div class="erase">
-                <h3>Erase:</h3>
+                <!-- <h3>Erase:</h3> -->
                 <button id="erase-button" class="parallelogram">Eraser</button>
             </div>
 
             <div class="clear">
-                <h3>Clear sketch:</h3>
+                <!-- <h3>Clear sketch:</h3> -->
                 <button id="clear-button">Clear</button>
             </div>
         </div>

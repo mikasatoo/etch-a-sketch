@@ -8,14 +8,16 @@ const rainbowButton = document.getElementById("rainbow-button");
 const eraseButton = document.getElementById("erase-button");
 const clearButton = document.getElementById("clear-button");
 
-// Array of acceptable grid size values (square numbers between 0 and 100 + a couple more)
-const gridSizeValues = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144];
+// // Array of acceptable grid size values (square numbers between 0 and 100)
+// const gridSizeValues = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
 
 // Function that creates the square grid
 let size;
 function createGrid(size) {
-    let columns = Math.sqrt(size);
-    let rows = Math.sqrt(size);
+    // let columns = Math.sqrt(size);
+    // let rows = Math.sqrt(size);
+    let columns = size;
+    let rows = size;
 
     for (let i = 0; i < columns; i++) {
         let column = document.createElement("div");     // create column
@@ -42,8 +44,9 @@ function deleteGrid() {
 
 // Add event listener (input) to slider that updates grid size
 slider.addEventListener("input", function() {
-    let gridSize = gridSizeValues[this.value];  // get gridSize value using array index
-    sizeOutput.textContent = `${gridSize} x ${gridSize}`;  // update text content
+    // let gridSize = gridSizeValues[this.value];  // get gridSize value using array index
+    let gridSize = this.value;
+    sizeOutput.textContent = `Grid size: ${gridSize} x ${gridSize}`;  // update text content
     deleteGrid();   // call the deleteGrid() function
     createGrid(gridSize);     // call the createGrid() function
     allowSketch();  // call the allowSketch() function
@@ -120,7 +123,7 @@ clearButton.addEventListener("click", function() {
 
 // Call createGrid function for a 16 x 16 grid by default
 createGrid(16);
-sizeOutput.textContent = "16 x 16";
+sizeOutput.textContent = "Grid size: 16 x 16";
 
 // Call the allowSketch() function
 allowSketch();

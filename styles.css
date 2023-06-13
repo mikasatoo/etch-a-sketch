@@ -19,18 +19,20 @@ body {
     justify-content: center;
     align-items: center;
     align-self: center;
-    background-color: #D2042D;
+    background-color: #E90418;
     width: 60%;
     max-width: 600px;
     margin: 20px 0px;
-    border: 3mm ridge #D2042D;
+    border: 3mm ridge #E90418;
     border-radius: 20px;
 }
 
 /* header div (in grid-container div) */
 .grid-container .header {
-    font-family: comic sans ms, Verdana, Arial, Helvetica, sans-serif;
+    /* font-family: comic sans ms, Verdana, Arial, Helvetica, sans-serif; */
+    font-family: Courier New, monospace;
     font-style: italic;
+    font-weight: bold;
     font-size: 36px;
     text-align: center;
     width: 80%;
@@ -133,14 +135,14 @@ h3 {
     width: 25px;
     height: 25px;
     border-radius: 50%; 
-    background: #D2042D;
+    background: #E90418;
     cursor: pointer;
 }
 .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #D2042D;
+    background: #E90418;
     cursor: pointer;
 }
 
